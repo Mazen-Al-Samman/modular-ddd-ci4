@@ -11,10 +11,12 @@
     },
     "require": {
         "php": "^7.4 || ^8.0",
-        "codeigniter4/framework": "^4.0"
+        "ext-json": "*",
+        "codeigniter4/framework": "^4.0",
+        "nesbot/carbon": "^2.71"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.9",
+        "fakerphp/faker": "^1.23",
         "mikey179/vfsstream": "^1.6",
         "phpunit/phpunit": "^9.1"
     },

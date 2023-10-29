@@ -2,9 +2,9 @@
 
 namespace Modules\User\Core\ValueObjects;
 
-use CodeIgniter\Model;
+use App\Models\BaseModel;
 
-class BaseValueObject extends Model
+class BaseValueObject extends BaseModel
 {
 
 }

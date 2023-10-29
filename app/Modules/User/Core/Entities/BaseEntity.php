@@ -2,9 +2,9 @@
 
 namespace Modules\User\Core\Entities;
 
-use CodeIgniter\Model;
+use App\Models\BaseModel;
 
-abstract class BaseEntity extends Model
+abstract class BaseEntity extends BaseModel
 {
 
 }

@@ -2,10 +2,23 @@
 
 namespace Modules\User\Application\Controllers;
 
+use Modules\User\Core\Services\UserService;
+use Modules\User\Core\Interfaces\UserServiceInterface;
+
 class UserController extends BaseController
 {
-    public function index()
+    protected UserServiceInterface $service;
+
+    public function __construct()
     {
-        dd('Hello world!');
+        $this->service = new UserService();
+    }
+
+    /**
+     * @return string
+     */
+    public function getStatistics(): string
+    {
+        return view($this->viewPath . 'statistics', ['data' => $this->service->getUsersStatistics()]);
     }
 }

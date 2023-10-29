@@ -7,4 +7,4 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 $routes->setDefaultNamespace('Modules\User\Application\Controllers');
-$routes->get('/', 'UserController::index');
+$routes->get('/', 'UserController::getStatistics');
