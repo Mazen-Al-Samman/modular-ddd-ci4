@@ -2,7 +2,7 @@
 
 namespace Modules\User\Application\Controllers;
 
-use Modules\User\Core\Services\UserService;
+use Modules\User\Application\Helpers\Services;
 use Modules\User\Core\Interfaces\UserServiceInterface;
 
 class UserController extends BaseController
@@ -11,7 +11,7 @@ class UserController extends BaseController
 
     public function __construct()
     {
-        $this->service = new UserService();
+        $this->service = Services::userServiceInterface();
     }
 
     /**

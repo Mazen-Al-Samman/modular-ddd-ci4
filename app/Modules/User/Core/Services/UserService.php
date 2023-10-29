@@ -2,7 +2,7 @@
 
 namespace Modules\User\Core\Services;
 
-use Modules\User\Core\Repositories\UserRepo;
+use Modules\User\Application\Helpers\Services;
 use Modules\User\Core\Interfaces\UserRepoInterface;
 use Modules\User\Core\Interfaces\UserServiceInterface;
 
@@ -12,7 +12,7 @@ class UserService extends BaseService implements UserServiceInterface
 
     public function __construct()
     {
-        $this->repo = new UserRepo();
+        $this->repo = Services::userRepoInterface();
     }
 
     /**
