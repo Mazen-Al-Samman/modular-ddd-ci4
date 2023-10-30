@@ -9,6 +9,7 @@ const MODULES_MAPPING = [
     // Route Group => Module Directory Name
     '/users' => 'User',
     '/category' => 'Category',
+    '/post' => 'Post',
 ];
 
 foreach (MODULES_MAPPING as $group => $module) {
