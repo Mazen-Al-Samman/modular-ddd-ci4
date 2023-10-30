@@ -7,7 +7,8 @@ use CodeIgniter\Router\Exceptions\RouterException;
 const MODULE_PATH = APPPATH . 'Modules/__module__/Application/Routes/index.php';
 const MODULES_MAPPING = [
     // Route Group => Module Directory Name
-    '/users' => 'User'
+    '/users' => 'User',
+    '/category' => 'Category',
 ];
 
 foreach (MODULES_MAPPING as $group => $module) {
