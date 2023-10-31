@@ -33,4 +33,13 @@ class PostService extends BaseService implements PostServiceInterface
         if (empty($postModel)) throw new Exception("Post $id Not Found", 404);
         return $postModel;
     }
+
+    /**
+     * @param int $userId
+     * @return array|null
+     */
+    public function getPostsByUserId(int $userId): ?array
+    {
+        return $this->repo->getByUserId($userId);
+    }
 }

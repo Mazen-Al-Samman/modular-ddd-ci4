@@ -4,6 +4,7 @@ namespace Modules\User\Application\Helpers;
 
 use Modules\User\Core\Services\UserService;
 use Modules\User\Core\Repositories\UserRepo;
+use Modules\User\Core\Contracts\UserPostsContract;
 
 class Services extends \Config\Services
 {
@@ -19,5 +20,12 @@ class Services extends \Config\Services
         $sharedInstance = static::getSharedInstance('userRepoInterface');
         if ($getShared && !empty($sharedInstance)) return $sharedInstance;
         return new UserRepo();
+    }
+
+    public static function userPostContractInterface($getShared = true)
+    {
+        $sharedInstance = static::getSharedInstance('userPostContractInterface');
+        if ($getShared && !empty($sharedInstance)) return $sharedInstance;
+        return new UserPostsContract();
     }
 }

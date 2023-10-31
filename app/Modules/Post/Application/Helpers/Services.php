@@ -9,7 +9,7 @@ class Services extends \Config\Services
 {
     public static function postServiceInterface($getShared = true)
     {
-        $sharedInstance = static::getSharedInstance('userServiceInterface');
+        $sharedInstance = static::getSharedInstance('postServiceInterface');
         if ($getShared && !empty($sharedInstance)) return $sharedInstance;
         return new PostService();
     }

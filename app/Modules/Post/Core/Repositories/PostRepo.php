@@ -22,7 +22,17 @@ class PostRepo extends BaseRepo implements PostRepoInterface
         return $this->entity->findAll();
     }
 
-    public function getPostById(int $id) {
+    public function getPostById(int $id)
+    {
         return $this->entity->where(['id' => $id])->first();
+    }
+
+    /**
+     * @param int $userId
+     * @return array|null
+     */
+    public function getByUserId(int $userId): ?array
+    {
+        return $this->entity->where(['user_id' => $userId])->findAll();
     }
 }
